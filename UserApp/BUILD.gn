@@ -1,0 +1,66 @@
+# Copyright (c) 2020 Huawei Device Co., Ltd.
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+config_file = [ "//vendor/bearpi/bearpi_hm_nano/common/third_party/libs/libpahomqtt_static.a" ]
+copy("config") {
+  sources = config_file
+  outputs = [ "//out/hispark_pegasus/wifiiot_hispark_pegasus/libs/{{source_file_part}}" ]
+}
+
+static_library("finalPrj") {
+  sources = [
+    "iot_cloud_oc_sample.c",
+    "src/oc_mqtt.c",
+    "src/oc_mqtt_profile_package.c",
+    "src/wifi_connect.c",
+    
+    "src/DHT11.c",
+    "src/sgp30.c",
+    "src/UserI2C.c",
+    "src/BH1750.c",
+    "src/OLED.c",
+    "src/OLEDFont.c",
+    "src/MQ2.c",
+    "src/motor_control.c",
+    "src/HCSR04.c",
+    "src/MyE53Interface.c", 
+    "src/nfc_configNet.c",
+
+  ]
+
+  cflags = [ "-Wno-unused-variable" ]
+  cflags += [ "-Wno-unused-but-set-variable" ]
+
+  include_dirs = [
+    "//base/iot_hardware/peripheral/interfaces/kits",
+    "//vendor/bearpi/bearpi_hm_nano/common/iot_hardware_hals/include",
+    "//foundation/communication/wifi_lite/interfaces/wifiservice",
+    "//third_party/cJSON",
+    "include",
+    "//vendor/bearpi/bearpi_hm_nano/common/third_party/paho_mqtt/MQTTClient-C/src",
+    "//vendor/bearpi/bearpi_hm_nano/common/third_party/paho_mqtt/MQTTPacket/src",
+
+    "//base/iot_hardware/peripheral/interfaces/kits",
+    "//device/hisilicon/hispark_pegasus/sdk_liteos/include",
+    "//device/hisilicon/hispark_pegasus/sdk_liteos/boot/commonboot",
+    "//device/hisilicon/hispark_pegasus/hi3861_adapter/kal/cmsis",
+    "//foundation/communication/wifi_lite/interfaces/wifiservice",
+    "//vendor/bearpi/bearpi_hm_nano/common/iot_hardware_hals/include",
+    "//device/hisilicon/hispark_pegasus/sdk_liteos/boot/flashboot/include",
+    "//device/hisilicon/hispark_pegasus/sdk_liteos/platform/drivers/adc",
+
+
+  ]
+  deps = [ ":config" ]
+  deps += [ "//vendor/bearpi/bearpi_hm_nano/common/iot_hardware_hals:bearpi_iot_hardware_hals" ]
+}
