@@ -86,9 +86,9 @@ typedef struct {
 
 } app_cb_t;
 
-#define CLIENT_ID       "663ddea16bc31504f069b342_12138178_0_0_2024051012"
-#define USERNAME        "663ddea16bc31504f069b342_12138178"
-#define PASSWORD        "3662fc75eca0cce1e611d2c0394d8056060d2e7e5407a830d27e61635a2d0d80"
+#define CLIENT_ID       "663ddea*****************************051012"
+#define USERNAME        "663d*****************78"
+#define PASSWORD        "3662***********************************0"
 
 const char *SSID =      "iKunFans";
 const char *PWD =       "qiuguoquan";
