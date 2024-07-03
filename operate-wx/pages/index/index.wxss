@@ -1,0 +1,70 @@
+/**index.wxss**/
+.container{
+  display: flex;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+.top-container {
+  flex: 1;
+  width: 100%;
+}
+
+.control-btn{
+  float: left;
+  padding: 10px;
+  /* 清除默认边框 */
+	border:0;
+  outline:none;
+  background-color: transparent;
+}
+.control-btn:active{
+  background-color: whitesmoke;
+}
+.token-btn{
+  background-color: transparent;
+}
+.token-btn:active{
+  background-color: whitesmoke;
+}
+.control-btn.control-left{
+  text-align: center;
+  width: 25%;
+}
+.control-btn.control-right{
+  text-align: center;
+  width: 25%;
+}
+.control-btn.control-round{
+  text-align: center;
+  width: 25%;
+}
+
+
+
+.bottom-container {
+  flex: 1;
+  width: 100%;
+
+}
+.control-btn image{
+  width: 64px;
+  height: 64px;
+  /* background-color: #F1F1F1; */
+  text-align: center;
+}
+
+.btn-select button{
+  margin-top: 30px;
+}
+.btn-select {
+  margin: 0;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+}
+
+
+
+
+

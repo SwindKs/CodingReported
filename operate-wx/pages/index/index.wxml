@@ -1,0 +1,41 @@
+<div class="btn-select" wx:if="{{btn_flag}}" >
+    <button id="auto" bindtap="showFlag">自动模式</button>
+    <button id="hand" bindtap="showFlag">手动模式</button>
+</div>
+<div class="container" wx:if="{{flag_container}}" >
+
+  <div class="top-container" wx:if="{{flag_top}}">
+    <!-- <web-view style src="{{webUrl}}"></web-view> -->
+    <rich-text nodes="{{html}}"> </rich-text>
+  </div>
+  <div style="display: flex; justify-content: center;">{{content}}</div>
+  <div  style="display: flex; justify-content: center;">
+    <button bindtap="backMain"> 返回界面 </button>
+  </div>
+  <div class="bottom-container" wx:if="{{flag_bottom}}">
+    <!-- <button bindtap="getToken" class="token-btn" >点我获取TOKEN</button> -->
+    
+    <div style="width: 100%; display: flex; text-align: center; justify-content: center;"> 
+      <button id="FORWARD" bindtap="operate" class="control-btn control-top">
+        <image src="../static/bg-up.png"></image>
+      </button>
+    </div>
+    <div style="width: 100%; display: flex; justify-content: space-between;">
+      <button id="LEFT" bindtap="operate" class="control-btn control-left">
+        <image src="../static/bg-left.png"></image>
+      </button>
+      <button id="STOP" bindtap="operate" class="control-btn control-round">
+        <image src="../static/bg-suspend.png"></image>
+      </button>
+      <button id="RIGHT" bindtap="operate" class="control-btn control-right">
+        <image src="../static/bg-right.png"></image>
+      </button>
+    </div>
+    <div style="width: 100%;display: flex;justify-content: center;">
+      <button id="BACKWARD" bindtap="operate" class="control-btn control-bottom">
+        <image src="../static/bg-down.png"></image>
+      </button>
+    </div>
+
+  </div>
+</div>

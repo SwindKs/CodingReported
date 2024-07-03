@@ -1,0 +1,17 @@
+<!--index.wxml-->
+<scroll-view class="scrollarea" scroll-y type="list">
+  <view class="container">
+    <view class="userinfo">
+        <view class="nickname-wrapper">
+          <text class="nickname-label">WIFI名称</text>
+          <input  class="ssid" placeholder="请输入WIFI名称" bindinput="inputSsid">{{ssid}}</input>
+        </view>
+        <view class="nickname-wrapper">
+          <text class="nickname-label">WIFI密码</text>
+          <input  class="pwd" placeholder="请输入WIFI密码" bindinput="inputPwd">{{pwd}}</input>
+        </view>
+    </view>
+    <button bindtap="getNfcInfo">写入NFC</button>
+
+  </view>
+</scroll-view>

@@ -1,0 +1,53 @@
+/**index.wxss**/
+
+.page-container{
+  padding: 36rpx;
+}
+.data-container{
+  background-color: rgba(255, 255, 255, 0.719);
+  margin-top: 36rpx;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill,300rpx);
+  grid-gap: 36rpx;
+}
+.data-container .data-card{
+  position: relative;
+  background-color: #fff;
+  height: 140rpx;
+  box-shadow: #d6d6d6 0 0 8rpx;
+  border-radius: 36rpx;
+  display: flex;
+  justify-content: space-between;
+  padding: 24rpx;
+}
+.data-container .data-card .data-card-text{
+  position: absolute;
+  right: 36rpx;
+  top: 36rpx;
+  text-align: right;
+  white-space: nowrap;
+}
+.data-container .data-card .data-card-icon{
+  position: absolute;
+  height: 72rpx;
+  width: 72rpx;
+  left: 32rpx;
+  top: 16rpx;
+}
+.data-container .data-card .data-card-value{
+
+  font-size: 52rpx;
+  font-weight: bold;
+}
+.data-container .data-card .data-card-title{
+  display: flex;
+  font-size: 28rpx;
+  color: #7f7f7f;
+}
+
+
+
+
+
+

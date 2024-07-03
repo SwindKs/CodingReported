@@ -1,0 +1,87 @@
+<!--index.wxml-->
+<view class="page-container">
+   <view class="header">
+
+   </view>
+   <view class="data-container">
+   <!-- 温度 -->
+    <view class="data-card">
+      <image class="data-card-icon" src="/pages/static/temp.png"/>
+      <view class="data-card-text">
+        <view class="data-card-title">
+        温度
+        </view>
+        <view class="data-card-value" style="color: {{temp_flag}};">
+        {{temp}}°C
+        </view>
+      </view>
+      
+    </view>
+    <!-- 湿度 -->
+    <view class="data-card">
+      <image class="data-card-icon" src="/pages/static/humi.png"/>
+      <view class="data-card-text">
+        <view class="data-card-title">
+          湿度 
+        </view>
+        <view class="data-card-value" style="color: {{humi_flag}};">
+          {{humi}}
+        </view>
+      </view>
+      
+    </view>
+    <!-- 光照强度 -->
+    <view class="data-card">
+      <image class="data-card-icon" src="/pages/static/light.png"/>
+      <view class="data-card-text">
+        <view class="data-card-title">
+          光照强度
+        </view>
+        <view class="data-card-value ">
+          {{light}}
+        </view>
+      </view>
+      
+    </view>
+    <!-- SMOKE -->
+    <view class="data-card">
+      <image class="data-card-icon" src="/pages/static/land.png"/>
+      <view class="data-card-text">
+        <view class="data-card-title"  >
+          Smoke
+        </view>
+        <view class="data-card-value "style="color: {{smoke_flag}};" >
+          {{smoke}}
+        </view>
+      </view>
+      
+    </view>
+    <!-- 二氧化碳 -->
+    <view class="data-card">
+      <image class="data-card-icon" src="/pages/static/co2.png"/>
+      <view class="data-card-text">
+        <view class="data-card-title">
+          CO2(ppm)
+        </view>
+        <view class="data-card-value "style="color: {{co2_flag}};" >
+          {{co2}}
+        </view>
+      </view>
+      
+    </view>
+    <!-- TVOC -->
+    <view class="data-card">
+      <image class="data-card-icon" src="/pages/static/tvoc.png"/>
+      <view class="data-card-text">
+        <view class="data-card-title">
+          TVOC(ppd)
+        </view>
+        <view class="data-card-value ">
+          {{tvoc}}
+        </view>
+      </view>
+      
+    </view>
+
+   </view>
+</view>
