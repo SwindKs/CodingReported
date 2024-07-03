@@ -290,7 +290,6 @@ int CloudMainTaskEntry(void)
 
     printf("循迹挂起\r\n");
     osThreadSuspend(TraceTaskID);
-    // uint32_t ret = WifiConnect(SSID, PWD);
 
     if(NFC_CONFIG_WIFI() == 0){
         
@@ -300,10 +299,6 @@ int CloudMainTaskEntry(void)
         WifiConnect(SSID, PWD);
         printf("WIFI Config Succ!!!\r\n");
     }
-    OLED_Clear();
-    OLED_ShowStr(2,25,"Connect AP Name:                             iKunFans",TEXT_SIZE_8);
-    hi_udelay(1000000);
-
 
     device_info_init(CLIENT_ID, USERNAME, PASSWORD);
     oc_mqtt_init();
@@ -396,11 +391,6 @@ static void IotMainTaskEntry(void)
     init_ctrl_algo();
     OLED_Init();
     IoTWatchDogDisable();
-
-    // WifiConnect(SSID, PWD);
-    // printf("WIFI Config Succ!!!\r\n");
-    // OLED_Clear();
-    // OLED_ShowStr(2,25,"Connect AP Name:                             iKunFans",TEXT_SIZE_8);
 
     mid_MsgQueue = osMessageQueueNew(MSGQUEUE_COUNT, MSGQUEUE_SIZE, NULL);
     if (mid_MsgQueue == NULL) {
